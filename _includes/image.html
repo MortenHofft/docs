@@ -1,0 +1,6 @@
+<figure class="image">
+  {% if include.linkToRaw == true or linkUrl%}<a href="{{ include.linkUrl | include.url }}">{% endif %}
+  <img src="{{ include.url}}" alt="{{ include.alt }}">
+  {% if include.linkToRaw == true %}</a>{% endif %}
+  <figcaption>{{ include.description | markdownify }}</figcaption>
+</figure>

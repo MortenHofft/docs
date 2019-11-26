@@ -1,0 +1,66 @@
+<div id='footer'>
+  <div class='three spacing'></div>
+  <div class='row'>
+    <div class='large-3 medium-3 columns'>
+      <h1>
+        <a href='index.html'>
+          <img alt="" src="{{site.url}}/images/col_square_logo.jpg" />
+        </a>
+      </h1>
+      <p>© Copyright 2015 by Catalogue of Life. All Rights Reserved. Read more about the <a href="https://themeforest.net/item/devoll-multipurpose-theme-powered-by-jekyll/11132266" style="color: white; text-decoration: underline">web design theme license</a>.</p>
+      <div class='spacing'></div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <div class='links'>
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Introduction</a></li>
+          <li><a href="index.html">Browse</a></li>
+          <li><a href="blog.html">Catalogue of Life Annual Checklist</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="services.html">Terms</a></li>
+        </ul>
+      </div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <div class='links'>
+        <h4>Recent posts</h4>
+        <ul>
+          {% for post in site.posts %}
+            <li><a href="{{post.url}}">{{post.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-3 medium-3 columns'>
+      <div class='spacing'></div>
+      <h4>Contact us</h4>
+      <ul>
+        <li>Phone: <a href="tel:+31 (0)71 7519 362">+31 (0)71 7519 362</a></li>
+        <li>Email: <a href="mailto:sp2000@sp2000.org">sp2000@sp2000.org</a></li>
+        <li>Species 2000 Secretariat, Naturalis Biodiversity Center, Vondellaan 55, Leiden, The Netherlands</li>
+      </ul>
+      <div class='spacing'></div>
+      <ul class='socials'>
+        <li>
+          <a href='https://www.facebook.com/{{site.facebook_username}}/'>
+            <i class='fa fa-facebook'></i>
+          </a>
+        </li>
+        <li>
+          <a href='https://twitter.com/{{site.twitter_username}}'>
+            <i class='fa fa-twitter'></i>
+          </a>
+        </li>
+      </ul>
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+</div>
+<script src="{{ "/assets/javascript/app.js" | prepend: site.baseurl }}" type="text/javascript"></script>
