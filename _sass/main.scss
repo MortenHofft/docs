@@ -34,6 +34,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: $color;
+  box-sizing: border-box;
 }
 
 main {
@@ -97,5 +98,152 @@ main {
   img {
     margin: 20px 0;
     max-width: 100%;
+  }
+}
+
+//layout
+.siteHeader {
+  z-index: 200;
+  overflow: hidden;
+  background: #077cbc;
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.24);
+  height: 55px;
+  top: 0;
+  right: 0;
+  left: 0;
+  nav {
+    margin: 0 20px;
+  }
+}
+
+.mainNav_brand {
+  float: left;
+  margin-top: 13px;
+  margin-right: 32px;
+  img {
+    height: 28px;
+  }
+}
+.mainNav_section {
+  float: left;
+  font-weight: 500;
+}
+
+.siteContent_toc, .siteContent_drawer {
+  display: none;
+}
+
+.siteContent {
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  margin: 55px auto;
+  max-width: 1400px;
+}
+.siteContent_main {
+  flex: 0 1 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.siteContent_drawer {
+  li.inActive {
+    display: none;
+  }
+  li {
+    padding: 10px;
+  }
+}
+
+.siteContent-aside {
+  z-index: 100;
+  position: relative;
+  overflow: auto;
+}
+.siteContent_aside_content {
+  overflow: auto;
+  position: fixed;
+  top: 55px;
+  max-height: calc(100vh - 55px);
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.siteContent_drawer {
+  background: white;
+  top: 55px;
+  bottom: 0;
+  z-index: 200;
+}
+@media only screen and (max-width: 1000px) {
+  .siteContent {
+    display: block;
+  }
+  .siteContent_drawer {
+    position: fixed;
+    right: 0;
+    display: block;
+  }
+  .drawerNav {
+    position: static;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .siteHeader {
+    overflow: hidden;
+    position: fixed;
+  }
+  .mainNav_tabs > li {
+    float: left;
+    list-style: none;
+    a {
+      margin-top: 4px;
+      display: inline-block;
+      line-height: 47px;
+      padding: 0 20px;
+      color: white;
+      text-decoration: none;
+      border: 0 solid #077cbc;
+      border-width: 0 0 4px 0;
+      font-size: 15px;
+    }
+    &.active a {
+      border-color: white;
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .siteContent_drawer {
+    flex: 1 1 250px;
+    display: block;
+  }
+  .siteContent {
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .siteContent_toc {
+    flex: 1 1 250px;
+    display: block;
   }
 }

@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /
-section_id: home
+permalink: /data
+section_id: dataAccess
 ---
 
 # Data pipelines for biodiversity data
