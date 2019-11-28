@@ -1,5 +1,5 @@
-<header class='siteHeader'>
-  <nav class='mainNav'>
+<aside class='siteContent_drawer siteContent_aside'>
+  <nav id="drawerNav" class='drawerNav siteContent_aside_content'>
     <!-- <ul class='title-area'>
       <li class='name'>
         <h1>
@@ -12,28 +12,25 @@
         <a href='#'>Menu</a>
       </li>
     </ul> -->
-    <div class="mainNav_brand">
-        <a href="/"><img class="logo" src="/assets/images/logo.png" alt="GBIF Docs" title="GBIF Docs"></a>
-    </div>
-    <section class='mainNav_section'>
-      <ul class="mainNav_tabs">
+    <section class='drawerNav_section'>
+      <ul>
         {% for item in site.data.nav %}
           {% if item.section_id == page.section_id %}
             {% assign active_class = "active" %}
           {% else %}
-            {% assign active_class = "" %}
+            {% assign active_class = "inActive" %}
           {% endif %}
 
           {% if item.children %}
             <li class="{{active_class}}">
               <a href="{{ item.path }}">{{ item.name }}</a>
-              <!-- <ul class='dropdown'>
+              <ul class='dropdown'>
                 {% for child in item.children %}
                   <li>
                     <a href="{{ child.path }}">{{ child.name }}</a>
                   </li>
                 {% endfor %}
-              </ul> -->
+              </ul>
             </li>
           {% else %}
             <li class="{{active_class}}">
@@ -44,4 +41,4 @@
       </ul>
     </section>
   </nav>
-</header>
+</aside>
