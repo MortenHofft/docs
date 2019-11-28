@@ -1,4 +1,4 @@
-<aside class='siteContent_drawer siteContent_aside'>
+<aside id="siteContent_drawer" class='siteContent_drawer siteContent_aside hide-sm'>
   <nav id="drawerNav" class='drawerNav siteContent_aside_content'>
     <!-- <ul class='title-area'>
       <li class='name'>
@@ -13,9 +13,10 @@
       </li>
     </ul> -->
     <section class='drawerNav_section'>
-      <ul>
+      <ol>
         {% for item in site.data.nav %}
-          {% if item.section_id == page.section_id %}
+        {% include menuItem.html item=item page=page %}
+          <!-- {% if item.section_id == page.section_id %}
             {% assign active_class = "active" %}
           {% else %}
             {% assign active_class = "inActive" %}
@@ -36,9 +37,10 @@
             <li class="{{active_class}}">
               <a href="{{ item.path }}">{{ item.name }}</a>
             </li>
-          {% endif %}
+          {% endif %} -->
+
         {% endfor %}
-      </ul>
+      </ol>
     </section>
   </nav>
 </aside>

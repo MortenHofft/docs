@@ -16,13 +16,14 @@ markdown: kramdown
 paginate: 3
 paginate_path: "news/page:num"
 
-exclude: ["/theme-examples", "/**/README.md"]
+exclude: ["/theme-examples", "/**/README.md", "/eleventy"]
 
 plugins:
   - jekyll-toc
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-redirect-from
 
 
 permalink: /:year/:month/:day/:title.html

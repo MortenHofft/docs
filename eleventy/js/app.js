@@ -1,3 +1,4 @@
+console.log(10);
 function resizeDrawers() {
   var footer = document.getElementById('footer');
   var offset = window.innerHeight - footer.getBoundingClientRect().top;

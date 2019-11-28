@@ -41,6 +41,7 @@ body {
   text-rendering: optimizeLegibility;
   color: $color;
   box-sizing: border-box;
+  background: pink;
 }
 
 main {
@@ -300,7 +301,6 @@ main {
     outline: none // We will only show outlines if it is a keyboard user. Else all those blue outlines is a bit much.
   }
 }
-
 
 
 

@@ -1,0 +1,21 @@
+<!-- consider using file structure https://thinkshout.com/blog/2014/12/creating-dynamic-menus-in-jekyll/ -->
+{% if include.item.url == include.page.url %}
+  {% assign active_class = "active" %}
+{% else %}
+  {% assign active_class = "inActive" %}
+{% endif %}
+
+{% if include.item.children %}
+  <li class="{{active_class}} hasChildren">
+    <a href="{{ include.item.url }}" class="drawerItem">{{ include.item.name }}</a>
+    <ol class='dropdown'>
+      {% for child in include.item.children %}
+        {% include menuItem.html item=child page=page depth=depth_new %}
+      {% endfor %}
+    </ol>
+  </li>
+{% else %}
+  <li class="{{active_class}} terminalNode">
+    <a class="drawerItem" href="{{ include.item.url }}">{{ include.item.name }}</a>
+  </li>
+{% endif %}

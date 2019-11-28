@@ -19,10 +19,10 @@ Data pipelines provides components to integrate, structure, interpret and transf
 
 Some of the high-level capabilities and objectives of Data pipelines include:
 
-* Support a variety of input formats (Darwin Core, ABCD, CSV files, Excel files, Shapefiles etc) with easy opportunity to include new connectors
-* Support batch (e.g. a project CSV) and streaming inout (e.g. append-only tracking data)
-* Align data to a standardized vocabularies, supporting multilingual data labelling
-* Apply quality controls to flag errors, detect outliers and apply statements about the suitability of the data for a variety of uses (also known as fitness for use indicators)
+1. Support a variety of input formats (Darwin Core, ABCD, CSV files, Excel files, Shapefiles etc) with easy opportunity to include new connectors
+2. Support batch (e.g. a project CSV) and streaming inout (e.g. append-only tracking data)
+3. Align data to a standardized vocabularies, supporting multilingual data labelling
+4. Apply quality controls to flag errors, detect outliers and apply statements about the suitability of the data for a variety of uses (also known as fitness for use indicators)
 
 ## Features
 
