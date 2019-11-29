@@ -20,9 +20,7 @@ module.exports = class {
     return await postcss([
       // require('postcss-comment'),
       require('precss'),
-      require('postcss-import'),
-      require('postcss-mixins'),
-      require('postcss-color-mix'),
+      require('autoprefixer'),
       require('cssnano')
     ])
     .process(rawCss, { from: rawFilepath })

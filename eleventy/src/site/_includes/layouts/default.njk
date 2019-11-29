@@ -17,6 +17,11 @@ title: My Rad Blog
     </div>
 
     {% include './footer.njk' %}
-    <script src="/js/app.js" type="text/javascript"></script>
+    {# <script src="/js/app.js" type="text/javascript"></script> #}
+    {% set js %}
+      {% include "js/header.js" %}
+      {% include "js/drawers.js" %}
+    {% endset %}
+    <script>{{ js | jsmin | safe }}</script>
   </body>
 </html>
