@@ -8,7 +8,7 @@ const fileName = "styles.css";
 
 module.exports = class {
   async data () {
-    const rawFilepath = path.join(__dirname, `../_includes/postcss/${fileName}`);
+    const rawFilepath = path.join(__dirname, `./_includes/postcss/${fileName}`);
     return {
       permalink: `css/${fileName}`,
       rawFilepath,
@@ -18,7 +18,6 @@ module.exports = class {
 
   async render ({ rawCss, rawFilepath }) {
     return await postcss([
-      // require('postcss-comment'),
       require('precss'),
       require('autoprefixer'),
       require('cssnano')

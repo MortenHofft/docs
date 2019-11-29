@@ -5,15 +5,11 @@
     </div>
     <section class='mainNav_section'>
       <ul class="mainNav_tabs">
-        <li class="active">
-          <a href="">group 1</a>
+        {% for item in sideNav.navigation %}
+				<li class="{% if page.url | startsWith(item.url) %}active{% endif %}">
+          <a href="{{ item.url }}">{{ item.title }}</a>
         </li>
-        <li class="inActive">
-          <a href="">group 2</a>
-        </li>
-        <li class="inActive">
-          <a href="">group 3</a>
-        </li>
+        {% endfor %}
       </ul>
     </section>
     <div class="mainNav-toggle">

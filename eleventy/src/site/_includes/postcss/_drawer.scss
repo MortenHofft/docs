@@ -2,32 +2,26 @@
   background: white;
   border-right: 1px solid #eee;
   .drawerNav {
-    padding: 30px 0;
+    padding: 0px 0;
   }
   .drawerItem {
-    color: inherit;
     text-decoration: none;
     display: inline-block;
   }
   ol {
     list-style: none;
   }
-  li {
+  /* li {
     padding-left: 10px;
     border: 1px solid tomato;
     margin: 5px;
-  }
+  } */
 }
 
-.drawerNav_section {
-  > ol {
-    > li {
-      >.drawerItem {
-        font-size: 22px;
-        margin: 20px 0 5px 0;
-      }
-    }
-  }
+.drawerDepth_1 > .drawerItem {
+  font-size: 22px;
+  margin: 30px 0 20px 0;
+  color: inherit;
 }
 
 .drawerDepth_2.hasChildren {
@@ -41,21 +35,33 @@
   }
 }
 
-.drawerDepth_3, .terminalNode {
+.noChildren, ol li{
   >.drawerItem {
     position: relative;
     display: block;
     font-size: 14px;
     color: #697386;
     text-decoration: none;
-    min-height: 28px;
     line-height: 20px;
     padding: 4px 16px 4px 0;
   }
 }
 
-/* .drawerDepth_2.terminalNode {
-  margin-top: 8px;
-  padding-top: 5px;
-  border-top: 1px solid #ddd;
-} */
+ol ol ol li.hasChildren {
+  ol {
+    /* display: none; */
+    li {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $aboveMobile) {
+  .drawerNav_section .drawerDepth_1 {
+    display: none;
+    &.activeGroup {
+      display: block;
+    }
+  }
+}
+

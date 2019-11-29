@@ -1,0 +1,63 @@
+{
+  "navigation": [
+    {
+      "title": "APIs",
+      "url": "/api/",
+      "children": [
+        {
+          "title": "GraphQL",
+          "url": "/api/graphql/"
+        },
+        {
+          "title": "Version 1",
+          "url": "/api/graphql/"
+        }
+      ]
+    },
+    {
+      "title": "Guides",
+      "url": "/guides/",
+      "children": [
+        {
+          "title": "Level 2-1",
+          "url": "/guides/level-2-1"
+        },
+        {
+          "title": "Level 2-2",
+          "url": "/guides/level-2-2"
+        },
+        {
+          "title": "Level 2-3",
+          "children": [
+            {
+              "title": "Level 3-1",
+              "url": "/guides/level-3-1"
+            },
+            {
+              "title": "Level 3-2",
+              "url": "/guides/level-3-2",
+              "children": [
+                {
+                  "title": "Level 4-1",
+                  "url": "/guides/level-4-1"
+                },
+                {
+                  "title": "Level 4-2",
+                  "url": "/guides/level-4-2"
+                },
+                {
+                  "title": "Level 4-3",
+                  "url": "/guides/level-4-3"
+                }
+              ]
+            },
+            {
+              "title": "Level 3-3",
+              "url": "/guides/level-3-3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

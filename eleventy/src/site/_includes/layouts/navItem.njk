@@ -1,0 +1,18 @@
+{% macro menuItem(item, page, depth=1) %}
+<li class="drawerDepth_{{depth}} {% if page.url | startsWith(item.url) %}activeGroup {% endif %}{% if page.url == item.url %}active {% endif %}{% if item.children %}hasChildren {% else %}noChildren {% endif %}">
+    {% if item.url %}
+        <a class="drawerItem" href="{{ item.url }}">{{ item.title }}</a>
+    {% else %}
+        <span class="drawerItem">
+        {{ item.title }}
+        </span>
+    {% endif %}
+    {% if item.children %}
+    <ol>
+        {% for item in item.children %}
+        {{ menuItem(item, page, depth + 1) }}
+        {% endfor %}
+    </ol>
+    {% endif %}
+</li>
+{% endmacro %}
