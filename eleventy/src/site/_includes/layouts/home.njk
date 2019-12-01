@@ -1,0 +1,58 @@
+---
+title: My Rad Blog
+---
+<!DOCTYPE html>
+<html>
+  {% include './head.njk' %}
+  <body class="home">
+    <div class="no-js-enabled" style="display: none"><span>We’re sorry, but the documentation does not work properly without JavaScript enabled.</span></div>
+    {% include './header.njk' %}
+
+    <div class="home">
+        <main class='' role='main'>
+					<div class="hero">
+						<div>
+							<h1>Technical documentation</h1>
+							<p class="subtitle">A place to document publishing, processsing, quality flagging and data access</p>
+						</div>
+					</div>
+
+					<article class="feature">
+						<div class="block">
+							<div class="feature_text">
+								<h1>Data access</h1>
+								<p>When using multiple plans on a single subscription, you can also create discounts, charge taxes, and use trial periods as you would with a single-plan subscription. Provide these as top-level arguments to the create or update subscription call, as they apply to the subscription at large:</p>
+								<p>
+									<a href="/api" class="button button-isPrimary">REST API</a>
+									<a href="/api/graphql/" class="button">GraphQL</a>
+								</p>
+							</div>
+							<img src="/images/graphic02.png" />
+						</div>
+					</article>
+
+					<article class="feature feature-gray">
+						<div class="block">
+								<img src="/images/graphic01.png" />
+							<div class="feature_text">
+								<h1>Guides</h1>
+								<p>When using multiple plans on a single subscription, you can also create discounts, charge taxes, and use trial periods as you would with a single-plan subscription. Provide these as top-level arguments to the create or update subscription call, as they apply to the subscription at large:</p>
+								<p>
+									<a href="/guides/" class="button button-isPrimary">Learn more</a>
+								</p>
+							</div>
+						</div>
+					</article>
+        </main>
+    </div>
+
+    {% include './footer.njk' %}
+    {# <script src="/js/app.js" type="text/javascript"></script> #}
+    {% set js %}
+      {% include "js/header.js" %}
+      {% include "js/drawers.js" %}
+      {% include "js/keyboardUser.js" %}
+    {% endset %}
+    <script>{{ js | jsmin | safe }}</script>
+  </body>
+</html>

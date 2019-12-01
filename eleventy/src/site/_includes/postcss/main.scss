@@ -1,6 +1,8 @@
 @import '_variables';
 @import '_drawer';
 @import '_toc';
+@import '_home';
+@import '_highlight';
 
 .current {
   color: green;
@@ -100,6 +102,12 @@ main {
   img {
     margin: 20px 0;
     max-width: 100%;
+  }
+
+  a {
+    color: #057bbc;
+    font-weight: 500;
+    text-decoration: none;
   }
 }
 

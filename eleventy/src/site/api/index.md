@@ -8,6 +8,23 @@ quoque antris, nec vulnus. Iuvenci et gratia Ulixem cultusque **quidem vox**,
 anum nomen et nescitve, ulvaeque. Te quo sufficiunt grave comis sequuntur
 contrarius virgo exanimem dixisse, ungula!
 
+``` js
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+
+(async () => {
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 1099,
+    currency: 'usd',
+  });
+})();
+
+function myFunction() {
+  return true;
+}
+```
+
 Tantis non sic. Anni insula [quid dira dea](http://nata.net/mei.html) repetet
 frigore. Conplecti cunctis ventos, leti!
 

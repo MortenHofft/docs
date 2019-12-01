@@ -1,8 +1,9 @@
 const babel = require("@babel/core");
 const pluginTOC = require('eleventy-plugin-toc')
 const markdownIt = require("markdown-it");
-let markdownItAnchor = require("markdown-it-anchor");
-let markdownItToc = require("markdown-it-table-of-contents");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItToc = require("markdown-it-table-of-contents");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
 
@@ -47,6 +48,9 @@ module.exports = function (eleventyConfig) {
   function markdownItSlugify(s) {
     return encodeURIComponent(removeExtraText(s).trim().toLowerCase().replace(/\s+/g, '-'));
   }
+
+  //plugins
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.setLibrary("md", markdownIt({
     html: true,
