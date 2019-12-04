@@ -115,7 +115,7 @@ main {
 .siteHeader {
   z-index: 300;
   overflow: hidden;
-  background: #077cbc;
+  background: linear-gradient(#78b578,#71b171);
   box-shadow: 0 1px 13px rgba(0, 0, 0, 0.24);
   height: 55px;
   top: 0;
@@ -259,7 +259,7 @@ main {
       padding: 0 20px;
       color: white;
       text-decoration: none;
-      border: 0 solid #077cbc;
+      border: 0 solid transparent;
       border-width: 0 0 4px 0;
       font-size: 15px;
     }
